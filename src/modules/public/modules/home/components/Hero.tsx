@@ -67,10 +67,10 @@ export function Hero() {
               Explorar señas
             </Link>
             <Link
-              href="#mision"
-              className="flex items-center justify-center w-full sm:w-auto h-12 px-8 rounded-full bg-[#c2eef5] text-[#1c3b40] font-medium hover:bg-[#aee6ef] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              href="/nosotros"
+              className="flex items-center justify-center w-full sm:w-auto h-12 px-8 rounded-full bg-primary/10 border-primary border-2 text-primary font-medium hover:bg-primary/20 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
-              Nuestra misión
+              Conócenos
             </Link>
           </div>
         </div>

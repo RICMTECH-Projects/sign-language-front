@@ -55,27 +55,35 @@ export function Navbar() {
         </Link>
 
         <Link
-          href="#comunidad"
-          className="relative group text-foreground hover:text-primary transition-colors pb-1 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
+          href="/comunidad"
+          className={`relative group transition-colors pb-1 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm ${
+            isActive("/comunidad") ? "text-primary font-bold" : "text-foreground hover:text-primary"
+          }`}
         >
           Comunidad
-          <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-primary transition-transform origin-left duration-300 scale-x-0 group-hover:scale-x-100" />
+          <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-primary transition-transform origin-left duration-300 ${
+            isActive("/comunidad") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+          }`} />
         </Link>
         <Link
-          href="#acerca"
-          className="relative group text-foreground hover:text-primary transition-colors pb-1 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
+          href="/nosotros"
+          className={`relative group transition-colors pb-1 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm ${
+            isActive("/nosotros") ? "text-primary font-bold" : "text-foreground hover:text-primary"
+          }`}
         >
           Acerca de
-          <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-primary transition-transform origin-left duration-300 scale-x-0 group-hover:scale-x-100" />
+          <span className={`absolute -bottom-1 left-0 w-full h-[2px] bg-primary transition-transform origin-left duration-300 ${
+            isActive("/nosotros") ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+          }`} />
         </Link>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
         <Link
-          href="#ingresar"
+          href="#login"
           className="hidden sm:flex items-center justify-center bg-primary text-[#fdfbf7] dark:text-white px-6 h-11 rounded-full font-medium hover:bg-primary-hover transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         >
-          Ingresar
+          Mi Signly
         </Link>
 
         <button
@@ -104,8 +112,8 @@ export function Navbar() {
       {[
         { name: "Inicio", href: "/" },
         { name: "Explorar", href: "/explorar" },
-        { name: "Comunidad", href: "#comunidad" },
-        { name: "Acerca de", href: "#acerca" }
+        { name: "Comunidad", href: "/comunidad" },
+        { name: "Acerca de", href: "/nosotros" }
       ].map((link, idx) => (
         <Link 
           key={link.href}
@@ -128,14 +136,14 @@ export function Navbar() {
       ))}
       
       <Link
-        href="#ingresar"
+        href="#login"
         onClick={() => setIsOpen(false)}
         className={`mt-6 flex items-center justify-center bg-primary text-white border-2 border-primary px-12 h-16 rounded-full font-medium hover:bg-transparent hover:text-primary shadow-xl shadow-primary/20 transition-all duration-500 ${
           isOpen ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-90"
         }`}
         style={{ transitionDelay: `${isOpen ? 400 : 0}ms` }}
       >
-        Ingresar
+        Mi Signly
       </Link>
     </div>
     </>

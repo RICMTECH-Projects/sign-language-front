@@ -15,16 +15,16 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-4 sm:gap-6 text-xs uppercase tracking-widest font-medium flex-wrap justify-center md:justify-end">
-          <Link href="#accesibilidad" className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline">
+          <Link href="/accesibilidad" className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline">
             Accesibilidad
           </Link>
-          <Link href="#privacidad" className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline">
+          <Link href="/privacidad" className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline">
             Privacidad
           </Link>
           <Link href="#recursos" className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline">
             Recursos
           </Link>
-          <Link href="#contacto" className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline">
+          <Link href="/nosotros#contacto" className="hover:text-primary transition-colors focus-visible:outline-none focus-visible:underline">
             Contacto
           </Link>
         </div>
