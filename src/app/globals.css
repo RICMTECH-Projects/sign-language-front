@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fdfbf7;
+  --color-foreground: #1c1c1c;
+  --color-primary: #a83f2a;
+  --color-primary-hover: #913524;
+  
+  --color-card-purple: #f3e8ff;
+  --color-card-blue: #e0f2fe;
+  --color-card-orange: #ffedd5;
+  
+  --radius-xl: 0.75rem;
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer theme {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: #111111;
+      --color-foreground: #f4f4f5;
+
+      --color-primary: #c2523d;
+      --color-primary-hover: #d26754;
+
+      --color-card-purple: #2d2447;
+      --color-card-blue: #162e33;
+      --color-card-orange: #3d261c;
+    }
+  }
+}
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    touch-action: manipulation;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium;
+    text-wrap: balance;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+  
+  .loading-dots::after {
+    content: '…';
+  }
+}
