@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Signly 🖐️✨
 
-## Getting Started
+**Signly** es una plataforma educativa dedicada al aprendizaje de la Lengua de Señas. Diseñada con un enfoque estético moderno e inclusivo, busca eliminar las barreras de comunicación a través de una experiencia visual e interactiva superior.
 
-First, run the development server:
+## 🚀 Características Principales
+
+- **Arquitectura Modular**: Organizado bajo una estructura de `src/modules` para escalabilidad y mantenibilidad.
+- **Diseño**: Interfaz fluida con una estética cálida, tipografía cuidada (Inter & Playfair Display) y animaciones de alto nivel.
+- **Biblioteca Visual (Explorar)**: Diccionario interactivo de señas con búsqueda en tiempo real y filtrado por categorías (Esenciales, Saludos, Alfabeto, etc.).
+- **Experiencia Mobile-First**: Menú móvil a pantalla completa con animaciones escalonadas y optimización para dispositivos táctiles.
+- **Animaciones Avanzadas**: Integración de GSAP para efectos de scroll-reveal y transiciones suaves de componentes.
+- **Dark Mode Nativo**: Soporte completo para modo oscuro con una paleta de colores optimizada.
+
+## 🛠️ Stack Tecnológico
+
+- **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
+- **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
+- **Estilos**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animaciones**: [GSAP](https://gsap.com/) & [@gsap/react](https://gsap.com/resources/React/)
+- **Iconos**: [Lucide React](https://lucide.dev/)
+
+## 📂 Estructura del Proyecto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/                  # Rutas y configuración de Next.js
+├── modules/
+│   └── public/           # Contenido orientado al usuario final
+│       ├── components/    # Componentes compartidos (Navbar, Footer)
+│       ├── modules/       # Lógica por página (home, explore, detail)
+│       └── services/      # Lógica de datos y filtrado
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Instalación y Desarrollo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clona el repositorio:
+```bash
+git clone https://github.com/RICMTECH-Projects/sign-language-front.git
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Instala las dependencias:
+```bash
+pnpm install
+# o
+npm install
+```
 
-## Learn More
+3. Inicia el servidor de desarrollo:
+```bash
+pnpm dev
+# o
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Créditos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Una iniciativa de **RICM TECH**. Desarrollado con ❤️ para fomentar la inclusión.
