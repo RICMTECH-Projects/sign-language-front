@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapPin, Phone, Music } from "lucide-react";
+import { Mail, MapPin, SendHorizonalIcon } from "lucide-react";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -48,23 +48,23 @@ export function ContactSection() {
           </div>
 
           <div className="flex flex-col gap-8 mt-4">
-            <div className="contact-element flex items-center gap-6 group cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                <Mail size={24} />
+            <div className="contact-element flex items-center gap-4 sm:gap-6 group cursor-pointer">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <Mail size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <div>
-                <p className="text-xs text-foreground/50 uppercase font-bold tracking-wider mb-1">Email</p>
-                <p className="text-xl font-medium">gestionclientes@ricmtech.dev</p>
+              <div className="min-w-0">
+                <p className="text-[10px] sm:text-xs text-foreground/50 uppercase font-bold tracking-wider mb-1">Email</p>
+                <p className="text-lg sm:text-xl font-medium break-all sm:break-normal">gestionclientes@ricmtech.dev</p>
               </div>
             </div>
 
-            <div className="contact-element flex items-center gap-6 group cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                <MapPin size={24} />
+            <div className="contact-element flex items-center gap-4 sm:gap-6 group cursor-pointer">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <MapPin size={20} className="sm:w-6 sm:h-6" />
               </div>
               <div>
-                <p className="text-xs text-foreground/50 uppercase font-bold tracking-wider mb-1">Ubicación</p>
-                <p className="text-xl font-medium">Lima, Perú</p>
+                <p className="text-[10px] sm:text-xs text-foreground/50 uppercase font-bold tracking-wider mb-1">Ubicación</p>
+                <p className="text-lg sm:text-xl font-medium">Lima, Perú</p>
               </div>
             </div>
           </div>
@@ -91,17 +91,17 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="contact-element p-10 rounded-[2.5rem] bg-linear-to-br from-[#f9e9e6] to-[#f4f2ff] dark:from-[#31201d] dark:to-[#2a243d] flex flex-col gap-6">
+          <div className="contact-element p-6 sm:p-10 rounded-4xl sm:rounded-[2.5rem] bg-linear-to-br from-[#f9e9e6] to-[#f4f2ff] dark:from-[#31201d] dark:to-[#2a243d] flex flex-col gap-6">
             <h4 className="text-2xl font-serif">Suscríbete al boletín</h4>
             <p className="text-foreground/70 text-sm">Recibe novedades sobre nuevos cursos y la comunidad Signly cada mes.</p>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-4">
               <input 
                 type="email" 
                 placeholder="Tu email..." 
-                className="flex-1 h-12 px-6 rounded-full bg-white dark:bg-zinc-950 border border-black/5 dark:border-white/10 outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                className="flex-1 h-12 px-6 py-4 rounded-full bg-white dark:bg-zinc-950 border border-black/5 dark:border-white/10 outline-none focus:ring-2 focus:ring-primary/50 transition-all"
               />
-              <button className="h-12 w-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-hover transition-colors">
-                GO
+              <button className="w-full h-12  md:size-12 rounded-full bg-primary text-white inline-flex items-center justify-center gap-4 cursor-pointer hover:bg-primary-hover transition-colors">
+                <span className="block md:hidden">Si, acepto</span> <SendHorizonalIcon/>
               </button>
             </div>
           </div>

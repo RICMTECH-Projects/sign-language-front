@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Play, Heart, ListFilter, Search, Check } from "lucide-react";
+import { Play, Heart, ListFilter, Search, Check, ChevronDown, ArrowDown } from "lucide-react";
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -37,6 +37,15 @@ export function ExploreSection() {
         }
       }
     );
+
+    // Arrow animation for the Load More button
+    gsap.to(".load-more-arrow", {
+      y: 8,
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
   }, { scope: container });
 
   return (
@@ -165,9 +174,15 @@ export function ExploreSection() {
           ))}
         </div>
 
-        <div className="explore-element w-full flex justify-center mt-6">
-          <button className="bg-[#B8F0F5] hover:bg-[#B8F0F5]/80 text-[#0f5358] transition-colors text-sm font-semibold px-8 py-4 rounded-full cursor-pointer shadow-sm">
-            Cargar más señas
+        <div className="explore-element w-full flex justify-center mt-16">
+          <button className="group flex flex-col items-center gap-4 cursor-pointer outline-none border-none bg-transparent">
+            <span className="text-sm sm:text-xs font-bold tracking-[0.3em] text-foreground/40 group-hover:text-primary uppercase transition-all duration-500">
+              CARGA MÁS SEÑAS
+            </span>
+            <div className="relative w-12 h-12 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full border border-zinc-200 dark:border-zinc-800 scale-100 group-hover:scale-110 group-hover:border-primary group-hover:bg-primary/5 transition-all duration-500"></div>
+              <ArrowDown className="load-more-arrow size-5 text-primary" />
+            </div>
           </button>
         </div>
       </div>

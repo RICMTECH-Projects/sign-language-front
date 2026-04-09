@@ -6,6 +6,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { HeartHandshakeIcon, SearchIcon } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,15 +63,15 @@ export function Hero() {
           <div className="hero-text flex flex-col sm:flex-row items-center gap-4 mt-4">
             <Link
               href="/explorar"
-              className="flex items-center justify-center w-full sm:w-auto h-12 px-8 rounded-full bg-primary text-white font-medium hover:bg-primary-hover transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className="inline-flex gap-2 items-center justify-center w-full sm:w-auto h-12 px-8 rounded-full bg-primary text-white font-medium hover:bg-primary-hover transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
-              Explorar señas
+              Explorar señas <SearchIcon className="size-4"/>
             </Link>
             <Link
               href="/nosotros"
-              className="flex items-center justify-center w-full sm:w-auto h-12 px-8 rounded-full bg-primary/10 border-primary border-2 text-primary font-medium hover:bg-primary/20 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className="inline-flex gap-2 items-center justify-center w-full sm:w-auto h-12 px-8 rounded-full bg-primary/10 border-primary border-2 text-primary font-medium hover:bg-primary/20 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
-              Conócenos
+              Conócenos <HeartHandshakeIcon className="size-5"/>
             </Link>
           </div>
         </div>

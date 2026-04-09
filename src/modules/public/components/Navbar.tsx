@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, UserIcon, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -81,9 +81,9 @@ export function Navbar() {
       <div className="flex items-center gap-2 sm:gap-4">
         <Link
           href="#login"
-          className="hidden sm:flex items-center justify-center bg-primary text-[#fdfbf7] dark:text-white px-6 h-11 rounded-full font-medium hover:bg-primary-hover transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          className="hidden sm:inline-flex gap-2 items-center justify-center bg-primary text-[#fdfbf7] dark:text-white px-6 h-11 rounded-full font-medium hover:bg-primary-hover transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         >
-          Mi Signly
+          <UserIcon className="size-5"/> Mi Signly
         </Link>
 
         <button
@@ -138,12 +138,12 @@ export function Navbar() {
       <Link
         href="#login"
         onClick={() => setIsOpen(false)}
-        className={`mt-6 flex items-center justify-center bg-primary text-white border-2 border-primary px-12 h-16 rounded-full font-medium hover:bg-transparent hover:text-primary shadow-xl shadow-primary/20 transition-all duration-500 ${
+        className={`mt-6 inline-flex gap-2 items-center justify-center bg-primary text-white border-2 border-primary px-12 h-16 rounded-full font-medium hover:bg-transparent hover:text-primary shadow-xl shadow-primary/20 transition-all duration-500 ${
           isOpen ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-90"
         }`}
         style={{ transitionDelay: `${isOpen ? 400 : 0}ms` }}
       >
-        Mi Signly
+        <UserIcon className="size-5"/> Mi Signly
       </Link>
     </div>
     </>
