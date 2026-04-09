@@ -40,9 +40,9 @@ export function CtaSection() {
         <div className="cta-element flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/explorar"
-            className="inline-flex gap-2 items-center justify-center w-full sm:w-auto h-12 px-8 rounded-full bg-primary text-white font-medium hover:bg-primary-hover transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="inline-flex gap-2 items-center justify-center w-fit h-12 px-8 rounded-full bg-primary text-white font-medium hover:bg-primary-hover transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 "
           >
-            Empezar a Aprender <GraduationCapIcon/>
+            Empezar a Aprender <GraduationCapIcon className="hidden sm:block"/>
           </Link>
         </div>
       </div>
