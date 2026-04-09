@@ -44,13 +44,13 @@ export function FoundersBubble() {
       </div>
 
       <Link 
-        href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+        href="https://www.linkedin.com/company/ricm-tech" target="_blank" rel="noopener noreferrer"
         className="flex items-center gap-3 bg-white/90 dark:bg-black/80 backdrop-blur-md p-2 pr-4 rounded-full shadow-2xl ring-1 ring-black/10 dark:ring-white/10 hover:ring-primary/50 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       >
         <div className="flex -space-x-4">
           <div className="relative w-10 h-10 rounded-full border-2 border-white dark:border-black overflow-hidden bg-zinc-200">
              <Image 
-               src="https://loremflickr.com/100/100/person,portrait,professional" 
+               src="/img/members/justin.webp" 
                alt="Founder 1" 
                fill 
                className="object-cover" 
@@ -58,7 +58,7 @@ export function FoundersBubble() {
           </div>
           <div className="relative w-10 h-10 rounded-full border-2 border-white dark:border-black overflow-hidden bg-zinc-300">
              <Image 
-               src="https://loremflickr.com/100/100/person,portrait,business" 
+               src="/img/members/roger.webp" 
                alt="Founder 2" 
                fill 
                className="object-cover" 
