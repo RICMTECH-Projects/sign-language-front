@@ -1,12 +1,7 @@
-import { SignsContainer } from '@/modules/public/modules/explore/components/SingDetails/SignsContainer';
-import { Suspense } from 'react';
+import { SignsContainer } from "@/modules/public/modules/explore/components/SingDetails/SignsContainer";
 
 const SignsPage = () => {
-	return (
-		<Suspense>
-			<SignsContainer />
-		</Suspense>
-	);
+	return <SignsContainer />;
 };
 
 export default SignsPage;
