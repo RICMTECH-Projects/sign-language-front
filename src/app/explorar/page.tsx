@@ -1,17 +1,10 @@
-import { Navbar } from "@/modules/public/components/Navbar";
-import { ExploreSection } from "@/modules/public/modules/explore/components/ExploreSection";
-import { Footer } from "@/modules/public/components/Footer";
-import { FoundersBubble } from "@/modules/public/components/FoundersBubble";
+import { CategoriesContainer } from '@/modules/public/modules/explore/components/Category/CategoriesContainer';
+import { Suspense } from 'react';
 
-export default function ExplorarPage() {
-  return (
-    <>
-      <Navbar />
-      <main className="flex flex-col items-center w-full min-h-screen bg-zinc-50 dark:bg-zinc-950 pt-20">
-        <ExploreSection />
-      </main>
-      <Footer />
-      <FoundersBubble />
-    </>
-  );
+export default function ExplorePage() {
+	return (
+		<Suspense>
+			<CategoriesContainer />
+		</Suspense>
+	);
 }

@@ -29,16 +29,15 @@ const getAxiosInstance = (baseURL: string, expectedType?: "File" | "Blob") => {
 		instance.interceptors.response.use(
 			res => res,
 			async error => {
+
+				/*
 				const status = error?.response?.status;
-			
 				if (!error.response || status >= 500) {
 					if (typeof window !== 'undefined') {
 						window.location.replace('/error');
 					}
 					return Promise.reject(error);
 				}
-			
-				/*
 					if (status === 401 && !originalRequest._retry) {
 					originalRequest._retry = true;
 				
@@ -49,7 +48,7 @@ const getAxiosInstance = (baseURL: string, expectedType?: "File" | "Blob") => {
 					}
 				}
 				*/
-			
+
 				return Promise.reject(error);
 
 			}
@@ -60,7 +59,7 @@ const getAxiosInstance = (baseURL: string, expectedType?: "File" | "Blob") => {
 	return axiosInstances[baseURL];
 };
 
-const defaultInstance = getAxiosInstance(process.env.NEXT_PUBLIC_API_URL ?? '');
+const defaultInstance = getAxiosInstance(process.env.NEXT_PUBLIC_BASE_URL ?? '');
 
 export class ExceptionHttpError extends Error {
 	type!: string;

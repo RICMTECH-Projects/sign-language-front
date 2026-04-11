@@ -151,3 +151,43 @@ export const CARDS: SignCard[] = [
     ]
   }
 ];
+
+export interface Category {
+  id: number;
+  name: string;
+  description: string;
+  imageUrl: string;
+}
+
+export const CATEGORIES: Category[] = [
+  {
+    id: 1,
+    name: "Saludos",
+    description: "Señas básicas para iniciar y cerrar conversaciones cotidianas.",
+    imageUrl: "https://loremflickr.com/600/400/hands,greeting?random=1",
+  },
+  {
+    id: 2,
+    name: "Esenciales Diarios",
+    description: "Gestos fundamentales para la comunicación del día a día.",
+    imageUrl: "https://loremflickr.com/600/400/hands,daily?random=2",
+  },
+  {
+    id: 3,
+    name: "Emociones",
+    description: "Expresiones para comunicar sentimientos y estados de ánimo.",
+    imageUrl: "https://loremflickr.com/600/400/hands,emotion?random=3",
+  },
+  {
+    id: 4,
+    name: "Alfabeto",
+    description: "Representación de letras mediante el lenguaje de señas.",
+    imageUrl: "https://loremflickr.com/600/400/hands,alphabet?random=4",
+  },
+  {
+    id: 5,
+    name: "Interacción Social",
+    description: "Señas utilizadas en conversaciones y relaciones sociales.",
+    imageUrl: "https://loremflickr.com/600/400/hands,social?random=5",
+  },
+];
