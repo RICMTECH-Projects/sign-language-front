@@ -1,11 +1,11 @@
 import { MessageSquare, Utensils } from "lucide-react";
-import { use } from "react";
-import { PerspectiveGrid } from "./PerspectiveGrid";
-import { MovementGuide } from "./MovementGuide";
-import { GestureHero } from "./GestureHero";
 import { notFound } from "next/navigation";
+import { use } from "react";
 import { CARDS, type SignCard } from "@/modules/public/services/signs";
 import { CustomButtonBack } from "@/modules/shared/components/CustomButtonBack";
+import { GestureHero } from "./GestureHero";
+import { MovementGuide } from "./MovementGuide";
+import { PerspectiveGrid } from "./PerspectiveGrid";
 
 export const SignDetailsContainer = ({
 	params,
@@ -83,9 +83,9 @@ export const SignDetailsContainer = ({
 						Ejemplos de Uso
 					</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						{sign.examples?.map((ex, idx) => (
+						{sign.examples?.map((ex) => (
 							<div
-								key={idx}
+								key={ex.text}
 								className="bg-white dark:bg-zinc-900 p-10 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-800 shadow-sm flex flex-col gap-6"
 							>
 								<div className="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center">

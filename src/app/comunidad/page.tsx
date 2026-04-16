@@ -1,16 +1,12 @@
-import { Suspense } from 'react';
+import type { Metadata } from 'next';
 import { CommunityContainer } from '@/modules/public/modules/community/components/CommunityContainer';
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: 'Comunidad | Signly',
 	description:
 		'Únete a la mayor comunidad de aprendizaje de lengua de señas. Conecta con otros estudiantes y expertos.',
 };
 
 export default function CommunityPage() {
-	return (
-		<Suspense>
-			<CommunityContainer />
-		</Suspense>
-	);
+	return <CommunityContainer />;
 }

@@ -1,35 +1,38 @@
-"use client";
+'use client';
 
-import { Sparkles, Activity, Users } from "lucide-react";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Sparkles, Activity, Users } from 'lucide-react';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function FeatureGrid() {
-  const container = useRef<HTMLElement>(null);
+	const container = useRef<HTMLElement>(null);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".feature-card",
-      { y: -60, opacity: 0 },
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.8, 
-        stagger: 0.15, 
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 75%",
-        }
-      }
-    );
-  }, { scope: container });
+	useGSAP(
+		() => {
+			gsap.fromTo(
+				'.feature-card',
+				{ y: -60, opacity: 0 },
+				{
+					y: 0,
+					opacity: 1,
+					duration: 0.8,
+					stagger: 0.15,
+					ease: 'power2.out',
+					scrollTrigger: {
+						trigger: container.current,
+						start: 'top 75%',
+					},
+				},
+			);
+		},
+		{ scope: container },
+	);
 
-  return (
+	return (
 		<section
 			ref={container}
 			className='w-full py-16 md:py-24 px-6 md:px-12 bg-white dark:bg-[#111111]'>

@@ -1,5 +1,4 @@
 import { AboutContainer } from '@/modules/public/modules/about/components/AboutContainer';
-import { Suspense } from 'react';
 
 export const metadata = {
 	title: 'Nosotros | Signly',
@@ -8,9 +7,5 @@ export const metadata = {
 };
 
 export default function AboutUsPage() {
-	return (
-		<Suspense>
-			<AboutContainer />
-		</Suspense>
-	);
+	return <AboutContainer />;
 }

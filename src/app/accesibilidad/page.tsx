@@ -1,15 +1,11 @@
-import AccesibilityContainer from "@/modules/public/modules/legal/components/AccesibilityContainer";
-import { Suspense } from "react";
+import type { Metadata } from 'next';
+import AccesibilityContainer from '@/modules/public/modules/legal/components/AccesibilityContainer';
 
-export const metadata = {
-	title: "Accesibilidad | Signly",
-	description: "Nuestra compromiso con una web accesible para todos.",
+export const metadata: Metadata = {
+	title: 'Accesibilidad | Signly',
+	description: 'Nuestra compromiso con una web accesible para todos.',
 };
 
 export default function AccesibilityPage() {
-	return (
-		<Suspense>
-			<AccesibilityContainer />
-		</Suspense>
-	);
+	return <AccesibilityContainer />;
 }

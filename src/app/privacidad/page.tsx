@@ -1,5 +1,4 @@
 import PrivacityContainer from '@/modules/public/modules/legal/components/PrivacityContainer';
-import { Suspense } from 'react';
 
 export const metadata = {
 	title: 'Política de Privacidad | Signly',
@@ -7,9 +6,5 @@ export const metadata = {
 };
 
 export default function PrivacityPage() {
-	return (
-		<Suspense>
-			<PrivacityContainer />
-		</Suspense>
-	);
+	return <PrivacityContainer />;
 }

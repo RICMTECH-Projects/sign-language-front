@@ -1,47 +1,57 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HeartHandshakeIcon, SearchIcon } from "lucide-react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { HeartHandshakeIcon, SearchIcon } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function Hero() {
-  const container = useRef<HTMLElement>(null);
+	const container = useRef<HTMLElement>(null);
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      ".hero-text",
-      { y: -30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out", delay: 0.2 }
-    );
-    tl.fromTo(
-      ".hero-image",
-      { scale: 0.95, y: -20, opacity: 0 },
-      { scale: 1, y: 0, opacity: 1, duration: 1, ease: "power3.out" },
-      "-=0.6"
-    );
-    tl.fromTo(
-      ".hero-stat",
-      { y: -20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.5)" },
-      "-=0.4"
-    );
+	useGSAP(
+		() => {
+			const tl = gsap.timeline();
+			tl.fromTo(
+				'.hero-text',
+				{ y: -30, opacity: 0 },
+				{
+					y: 0,
+					opacity: 1,
+					duration: 0.8,
+					stagger: 0.2,
+					ease: 'power3.out',
+					delay: 0.2,
+				},
+			);
+			tl.fromTo(
+				'.hero-image',
+				{ scale: 0.95, y: -20, opacity: 0 },
+				{ scale: 1, y: 0, opacity: 1, duration: 1, ease: 'power3.out' },
+				'-=0.6',
+			);
+			tl.fromTo(
+				'.hero-stat',
+				{ y: -20, opacity: 0 },
+				{ y: 0, opacity: 1, duration: 0.6, ease: 'back.out(1.5)' },
+				'-=0.4',
+			);
 
-    tl.fromTo(
-      ".hero-svg-path",
-      { strokeDasharray: 1000, strokeDashoffset: 1000 },
-      { strokeDashoffset: 0, duration: 2.5, ease: "power2.inOut" },
-      "-=1.5"
-    );
-  }, { scope: container });
+			tl.fromTo(
+				'.hero-svg-path',
+				{ strokeDasharray: 1000, strokeDashoffset: 1000 },
+				{ strokeDashoffset: 0, duration: 2.5, ease: 'power2.inOut' },
+				'-=1.5',
+			);
+		},
+		{ scope: container },
+	);
 
-  return (
+	return (
 		<header
 			ref={container}
 			className='relative w-full min-h-screen flex items-center justify-center pt-24 pb-16 px-6 md:px-12 overflow-hidden'>
@@ -68,6 +78,13 @@ export function Hero() {
 						/>
 					</svg>
 
+					<div className='hero-text inline-flex items-center gap-2 w-fit px-4 py-2 bg-primary/10 rounded-full border border-primary/20'>
+						<span className='w-2 h-2 bg-primary rounded-full animate-pulse' />
+						<span className='text-sm font-medium text-primary'>
+							Iniciativa de RICM Tech
+						</span>
+					</div>
+
 					<h1 className='hero-text text-5xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.1] tracking-tight'>
 						Aprende a hablar <br className='hidden sm:block' />
 						con las <span className='italic text-primary'>manos</span>{' '}
@@ -75,9 +92,10 @@ export function Hero() {
 					</h1>
 
 					<p className='hero-text text-lg md:text-xl text-foreground/80 max-w-prose leading-relaxed'>
-						Domina la Lengua de Señas de forma fácil y efectiva. Un curso
-						diseñado para todos, sin importar tu experiencia previa, para
-						fomentar una comunicación sin barreras.
+						Domina la Lengua de Señas de forma fácil y efectiva con Signly,
+						desarrollado por RICM Tech. Un curso diseñado para todos, sin
+						importar tu experiencia previa, para fomentar una comunicación sin
+						barreras.
 					</p>
 
 					<div className='hero-text flex flex-col sm:flex-row items-center gap-4 mt-4'>
